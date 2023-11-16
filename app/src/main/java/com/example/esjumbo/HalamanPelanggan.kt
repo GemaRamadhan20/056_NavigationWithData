@@ -2,8 +2,11 @@ package com.example.esjumbo
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -28,5 +31,13 @@ fun CustomerDetailsScreen(
             .fillMaxSize()
             .padding(horizontal = 16.dp, vertical = 16.dp)
     ) {}
+    OutlinedTextField(
+        value = namaPelanggan,
+        onValueChange = { namaPelanggan = it },
+        label = { Text(text = "Nama Pelanggan") },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 8.dp),
+    )
 class HalamanPelanggan {
 }}
